@@ -1,0 +1,22 @@
+User Input (Date)
+      ↓
+┌─────────────────┐
+│   NASA API      │
+│ - Image URL     │
+│ - Title         │
+│ - Explanation   │ (Technical/Complex)
+└─────────────────┘
+      ↓
+┌─────────────────┐
+│   Groq AI     │
+│ Input: NASA     │
+│ explanation     │
+│ Output: Simple  │
+│ version         │ (Easy to understand)
+└─────────────────┘
+      ↓
+Display Combined:
+- Space photo
+- Original explanation (for comparison)
+- Simplified explanation (the solution)
+
