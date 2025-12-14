@@ -108,13 +108,13 @@ def simplify_with_ai(text):
     
     WHY THIS FUNCTION:
     NASA explanations are written for scientific audiences and often contain
-    technical jargon. We use Groq's AI (powered by Llama 3.1) to translate 
+    technical jargon. We use Groq's AI to translate 
     this into language that's accessible to beginners while maintaining 
     scientific accuracy. This is the core value-add of our application.
     
     WHY GROQ:
     Groq provides fast, reliable free API access with generous rate limits.
-    It's faster than other free alternatives and has excellent uptime.
+    It's faster than other free alternatives and has pretty good uptime.
     """
     
     try:
@@ -187,13 +187,12 @@ def process_and_display(date):
     
     # Check if we successfully got data
     # WHY: Error handling - if NASA API failed, we can't continue with this date
-    # Better to skip gracefully than crash the entire program
     if not nasa_data:
         print(f"Skipping {date} due to NASA API error\n")
         return
     
     # Step 2: Simplify the explanation with AI
-    # WHY: This is where the magic happens - technical → accessible
+    # WHY: aim is to make the content accessible to our student audience
     # We take NASA's scientific description and make it understandable
     simplified_explanation = simplify_with_ai(nasa_data['explanation'])
     
@@ -201,12 +200,12 @@ def process_and_display(date):
     # WHY: Clear output format shows both versions for comparison, demonstrating
     # the value of our simplification process
     print("\n" + "-"*80)
-    print(f"📅 DATE: {date}")
-    print(f"🌟 TITLE: {nasa_data['title']}")
-    print(f"🖼️  IMAGE URL: {nasa_data['url']}")
+    print(f"DATE: {date}")
+    print(f"TITLE: {nasa_data['title']}")
+    print(f"IMAGE URL: {nasa_data['url']}")
     print("-"*80)
     
-    print("\n📖 ORIGINAL NASA EXPLANATION:")
+    print("\n ORIGINAL NASA EXPLANATION:")
     print("-"*80)
     print(nasa_data['explanation'])
     
@@ -255,7 +254,7 @@ def main():
     The assignment requires testing with at least 3 different inputs to show
     the solution works across different complexity levels. This demonstrates
     that our approach is robust and handles various types of astronomical
-    content (simple descriptions, technical papers, observational data, etc.).
+    content .
     """
     
     print("\n" + "="*80)
